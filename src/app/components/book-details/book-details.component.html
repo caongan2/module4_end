@@ -1,11 +1,12 @@
+<div class="form-control btn btn-success text-aline">Thông tin sách</div>
 <div class="card">
   <div class="card-header">
     <h2>{{book.title}}</h2>
   </div>
   <div class="card-body">
     <div class="card-body">
-      <p>Author:<span>{{book.author}}</span></p>
-      <p>Description:<span>{{book.description}}</span></p>
+      <pre><h4>Tác giả:</h4><span>{{book.author}}</span></pre>
+      <pre><h4>Mô tả:</h4><span>{{book.description}}</span></pre>
     </div>
   </div>
   <a class="btn btn-success float-end" style="width: 10%" routerLink="../../../books">Back</a>
