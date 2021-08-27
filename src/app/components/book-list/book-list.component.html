@@ -1,0 +1,30 @@
+<div>
+  <a  class="btn btn-success" routerLink="create">Thêm mới</a>
+</div>
+<div class="container">
+  <div class="row">
+    <p>Tổng có {{books.length}} cuốn sách</p>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Tên sách</th>
+        <th scope="col">Tác giả</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let book of books; let i = index">
+        <th scope="row">{{i + 1}}</th>
+        <td><a [routerLink]="['/detail/', book.id]">{{book.title}}</a></td>
+        <td>{{book.author}}</td>
+        <td>
+          <button class="btn btn-primary" [routerLink]="['edit/', book.id]">Edit</button>
+          <button class="btn btn-danger" (click)="delete(book.id)">Delete</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
